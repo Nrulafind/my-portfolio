@@ -39,7 +39,7 @@ function App() {
             <li><a href="#AboutMe">About Me</a></li>
             <li><a href="#MySkills">My Skills</a></li>
             <li><a href="#MyProject">My Projects</a></li>
-            <li><a href="#MyBlog">My Blog</a></li>
+            <li><a href="#MyBlog">My Blogs</a></li>
           </ul>
         </nav>
 
