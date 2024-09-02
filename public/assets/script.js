@@ -82,3 +82,42 @@ style.innerHTML = `
     }
 `;
 document.head.appendChild(style);
+
+document.addEventListener("DOMContentLoaded", function () {
+    const track = document.querySelector(".carousel-track");
+    let slides = Array.from(track.children);
+
+    // Duplicate slides for infinite loop
+    function duplicateSlides() {
+        slides.forEach(slide => {
+            const clone = slide.cloneNode(true);
+            track.appendChild(clone);
+        });
+    }
+
+    // Calculate track width dynamically
+    function updateTrackWidth() {
+        return track.scrollWidth;
+    }
+
+    // Start the carousel
+    function startCarousel() {
+        let trackWidth = updateTrackWidth();
+        track.style.transition = "transform 5s linear";
+        track.style.transform = `translateX(-${trackWidth / 2}px)`;
+
+        track.addEventListener("transitionend", () => {
+            track.style.transition = "none";
+            track.style.transform = "translateX(0)";
+            setTimeout(() => {
+                track.style.transition = "transform 5s linear";
+                track.style.transform = `translateX(-${trackWidth / 2}px)`;
+            }, 50);
+        });
+    }
+
+    // Initialize
+    duplicateSlides();
+    startCarousel();
+});
+
