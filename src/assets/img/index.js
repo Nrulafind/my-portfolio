@@ -1,16 +1,22 @@
 // src/assets/img/index.js
-
-import heroImage from './IMG_20230712_151629-removebg-preview.png';
-import logo from './79900731.png';
 import php from '../img/php.png';
 import python from '../img/python.png';
+import mysql from '../img/mysql.png';
+import js from '../img/js.png';
+import postgre from '../img/postgre.png';
 const skillImages = [
     python,
     php,
+    js,
+    mysql,
+    postgre
 ]
 export default {
     skillImages,
     php,
-    python
+    python,
+    js,
+    mysql,
+    postgre
 
 };

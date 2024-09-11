@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-
+import { useNavigate } from 'react-router-dom';
+import { auth, db } from '../firebase';
+import { collect }
 const AdminPage = () => {
     const [project, setProject] = useState({ title: '', description: '', image: '', link: '' });
     const [blog, setBlog] = useState({ title: '', description: '', image: '', link: '' });
