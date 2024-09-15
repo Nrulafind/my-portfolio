@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './pages/Homepage';
 import AdminPage from './pages/AdminPage';
+import Login from './pages/Login';
+import PrivateRoute from './components/PrivateRoute.js';
 
 import './assets/css/style.css';
 import './assets/script.js';
@@ -10,7 +12,8 @@ function App() {
     <Router basename="/my-portfolio">
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/admin' element={<AdminPage />} />
+        <Route path='/login' element={<Login />} />
+        <PrivateRoute path='/admin' element={<AdminPage />} />
       </Routes>
     </Router >
   )
