@@ -81,7 +81,7 @@ const AdminPage = () => {
         <div className="admin-container" >
             <h1>Admin Page</h1>
 
-            <button onClick={handleLogout}>Logout</button>
+            <button onClick={handleLogout}></button>
 
             <div className="form-group">
                 <h2>Add New Project</h2>
@@ -111,7 +111,7 @@ const AdminPage = () => {
                             value={project.title}
                             onChange={(e) => updateProject(project.id, { title: e.target.value })}
                         />
-                        <button onClick={() => deleteBlog(project.id)}>Delete</button>
+                        <button onClick={() => deleteProject(project.id)}>Delete</button>
                     </div>
                 ))}
             </div>
